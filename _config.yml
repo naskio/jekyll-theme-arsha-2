@@ -1,0 +1,60 @@
+##### Theme settings - will be applied before copying .scss files into site #####
+sass:
+  style: compressed
+##### Theme settings - will be applied before copying .scss files into site  #####
+
+
+##### Theme plugins - should be installed manually in the site to use the theme #####
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-relative-links
+##### Theme plugins - should be installed manually in the site to use the theme #####
+
+
+##### Site config - won't be loaded when using the theme, you should have something similar in your site #####
+
+#> metadata #
+baseurl: "/jekyll-theme-arsha-2"
+url: "https://naskio.github.io"
+
+name: Naskio
+title: Arsha Bootstrap Template by Naskio
+email: hi@nask.io
+description: >- # this means to ignore newlines until "X:"
+  Arsha is a clean and modern business Bootstrap template designed specifically for startup, apps and IT services. 
+  You will be able to showcase your content on mobile devices such as smartphones, tablets and all types of devices. 
+  Arsha’s design is driven by minimalist and unique sections. 
+  With this template pixel-perfect layout and neat sectioning, it will help you create a professional-looking website for your business in no time.
+
+social_links:
+  github: https://github.com/naskio/jekyll-theme-arsha-2
+  discord: "#"
+  twitter: "#"
+#< metadata #
+
+#> permalinks and default layouts #
+permalink: pretty # remove .html extension from permalinks
+defaults: # adding default layouts
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /portfolio/:year/:title/
+#< permalinks and default layouts #
+
+#> jekyll-relative-links #
+relative_links:
+  enabled: true
+  exclude:
+    - DOCUMENTATION.md
+#< jekyll-relative-links #
+
+exclude:
+  - jekyll-theme-arsha.gemspec
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+##### Site config - won't be loaded when using the theme, you should have something similar in your site #####
