@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+{% capture url %}{% link index.html %}{% endcapture %}
+{% assign index_url = url | relative_url %}
+
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="{{ index_url }}">Home</a></li>
+                {% comment %}<li>{{ page.title }}</li>{% endcomment %}
+                <li>Portfolio Details</li>
+            </ol>
+            <h2>{{ page.title }}</h2>
+            {% comment %}<h2>Portfolio Details</h2>{% endcomment %}
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-8">
+                    <div class="portfolio-details-slider swiper">
+                        <div class="swiper-wrapper align-items-center">
+                            <div class="swiper-slide">
+                                <img src="{{ page.featured_image | default: "assets/img/placeholder.jpg" | relative_url }}"
+                                     alt="Portfolio">
+                            </div>
+                            {% for img_url in page.images %}
+                                <div class="swiper-slide">
+                                    <img src="{{ img_url | relative_url }}" alt="Portfolio">
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="portfolio-info">
+                        <h3>Project information</h3>
+                        <ul>
+                            <li><strong>Category</strong>: {{ page.categories | default: "N/A" }}</li>
+                            <li><strong>Client</strong>: {{ page.client | default: "N/A" }}</li>
+                            <li><strong>Project date</strong>: {{ page.date | date: "%d %B, %Y" | default: "N/A" }}</li>
+                            <li><strong>Project URL</strong>: <a {% if page.external_url %}target="_blank"{% endif %}
+                                                                 href="{{ page.external_url | default: "#" }}">{{ page.external_url | default: "N/A" }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-description">
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Portfolio Details Section -->
+</main><!-- End #main -->

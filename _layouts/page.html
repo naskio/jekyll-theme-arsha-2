@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+{% capture url %}{% link index.html %}{% endcapture %}
+{% assign index_url = url | relative_url %}
+
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="{{ index_url }}">Home</a></li>
+                <li>{{ page.title }}</li>
+            </ol>
+            <h2>{{ page.title }}</h2>
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+        <div class="container">
+            {{ content }}
+        </div>
+    </section>
+</main><!-- End #main -->
