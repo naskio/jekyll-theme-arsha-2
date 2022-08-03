@@ -36,10 +36,12 @@
     <!-- custom SASS styles from _sass/main.scss -->
 
     {%- feed_meta -%}
+
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
         {%- include addons/google-analytics.html -%}
     {%- endif -%}
 
     {{ include.content }}
+
     {%- include custom/head-extras.html -%}
 </head>
