@@ -2,7 +2,7 @@
 {% capture url %}{% link index.html %}{% endcapture %}
 {% assign index_url = url | relative_url %}
 <!-- ======= Header ======= -->
-<header id="header" class="fixed-top {% if page_url != "/" %}header-inner-pages{% endif %}">
+<header id="header" class="fixed-top {% if page_url != index_url %}header-inner-pages{% endif %}">
     <div class="container d-flex align-items-center">
         {% if site.logo %}
             <a href="{{ index_url }}" class="logo me-auto"><img src="{{ site.logo | relative_url }}"
