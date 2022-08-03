@@ -1,0 +1,45 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ site.title | default: "" }}{% if include.title %} - {{ include.title }}{% endif %}</title>
+
+    {%- seo -%}
+
+    <!-- ARSHA Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+    <!-- ARSHA Google Fonts -->
+
+    <!-- ARSHA Vendor CSS Files -->
+    <link href="{{ "assets/vendor/aos/aos.css" | relative_url }}" rel="stylesheet">
+    <link href="{{ "assets/vendor/bootstrap/css/bootstrap.min.css" | relative_url }}" rel="stylesheet">
+    <link href="{{ "assets/vendor/bootstrap-icons/bootstrap-icons.css" | relative_url }}" rel="stylesheet">
+    <link href="{{ "assets/vendor/boxicons/css/boxicons.min.css" | relative_url }}" rel="stylesheet">
+    <link href="{{ "assets/vendor/glightbox/css/glightbox.min.css" | relative_url }}" rel="stylesheet">
+    <link href="{{ "assets/vendor/remixicon/remixicon.css" | relative_url }}" rel="stylesheet">
+    <link href="{{ "assets/vendor/swiper/swiper-bundle.min.css" | relative_url }}" rel="stylesheet">
+    <!-- ARSHA Vendor CSS Files -->
+
+    <!-- ARSHA Template Main CSS File -->
+    <link rel="stylesheet" href="{{ "assets/css/style.css" | relative_url }}">
+    <!-- ARSHA Template Main CSS File -->
+
+    <!-- custom CSS Files -->
+    {% comment %}<link rel="stylesheet" href="{{ "assets/css/styles.css" | relative_url }}">{% endcomment %}
+    <!-- custom CSS Files -->
+
+    <!-- custom SASS styles from _sass/main.scss -->
+    <link rel="stylesheet"
+          href="{% capture url %}{% link assets/css/sass.scss %}{% endcapture %}{{ url | relative_url }}">
+    <!-- custom SASS styles from _sass/main.scss -->
+
+    {%- feed_meta -%}
+    {%- if jekyll.environment == 'production' and site.google_analytics -%}
+        {%- include addons/google-analytics.html -%}
+    {%- endif -%}
+
+    {{ include.content }}
+    {%- include custom/head-extras.html -%}
+</head>
