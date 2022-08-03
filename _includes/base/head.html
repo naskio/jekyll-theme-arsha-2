@@ -3,7 +3,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{{ site.title | default: "" }}{% if include.title %} - {{ include.title }}{% endif %}</title>
+    {% if include.title %}<title>{{ site.title | default: "" }} - {{ include.title }}</title>{% endif %}
 
     {%- seo -%}
 
