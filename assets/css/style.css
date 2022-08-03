@@ -1,3 +1,7 @@
+---
+# The empty front matter at the top tells Jekyll it needs to process the file (for dynamic url resolution).
+---
+
 /**
 * Template Name: Arsha - v4.8.0
 * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
@@ -223,7 +227,7 @@ h6 {
   opacity: 0;
   visibility: hidden;
   background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  box-shadow: 0 0 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
   border-radius: 4px;
 }
@@ -365,7 +369,7 @@ h6 {
   opacity: 1;
   visibility: visible;
   background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  box-shadow: 0 0 30px rgba(127, 137, 161, 0.25);
 }
 
 .navbar-mobile .dropdown ul li {
@@ -863,7 +867,7 @@ section {
 # Services
 --------------------------------------------------------------*/
 .services .icon-box {
-  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
   padding: 50px 30px;
   transition: all ease-in-out 0.4s;
   background: #fff;
@@ -908,7 +912,8 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("../img/cta-bg.jpg") fixed center center;
+  /*background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("../img/cta-bg.jpg") fixed center center;*/
+  background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url('{{ "assets/img/cta-bg.jpg" | relative_url }}') fixed center center;
   background-size: cover;
   padding: 120px 0;
 }
@@ -1012,8 +1017,7 @@ section {
   font-size: 18px;
   color: #fff;
   font-weight: 600;
-  color: #fff;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .portfolio .portfolio-item .portfolio-info p {
@@ -1079,7 +1083,7 @@ section {
 
 .portfolio-details .portfolio-info {
   padding: 30px;
-  box-shadow: 0px 0 30px rgba(55, 81, 126, 0.08);
+  box-shadow: 0 0 30px rgba(55, 81, 126, 0.08);
 }
 
 .portfolio-details .portfolio-info h3 {
@@ -1119,7 +1123,7 @@ section {
 --------------------------------------------------------------*/
 .team .member {
   position: relative;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   padding: 30px;
   border-radius: 5px;
   background: #fff;
@@ -1290,7 +1294,6 @@ section {
   padding: 12px 35px;
   border-radius: 50px;
   color: #47b2e4;
-  transition: none;
   font-size: 16px;
   font-weight: 500;
   font-family: "Jost", sans-serif;
@@ -1569,7 +1572,6 @@ section {
 
 .contact .php-email-form input,
 .contact .php-email-form textarea {
-  border-radius: 0;
   box-shadow: none;
   font-size: 14px;
   border-radius: 4px;
@@ -1694,7 +1696,7 @@ section {
   padding: 6px 10px;
   position: relative;
   border-radius: 50px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
   text-align: left;
 }
 
@@ -1717,7 +1719,7 @@ section {
   color: #fff;
   transition: 0.3s;
   border-radius: 50px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 #footer .footer-newsletter form input[type=submit]:hover {
