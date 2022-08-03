@@ -7,6 +7,8 @@
 * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
+*
+* Renamed from 'style.css' to 'main.css' to avoid GitHub Pages issue (not loading /assets/css/style.css correctly, it loads another file instead).
 */
 
 /*--------------------------------------------------------------

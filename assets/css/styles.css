@@ -1,6 +1,6 @@
----
-# The empty front matter at the top tells Jekyll it needs to process the file (for dynamic url resolution).
----
+/**
+* Customize the theme as you wish.
+*/
 
 #footer .footer-bottom .social-links a {
     font-size: 32px;
