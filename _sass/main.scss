@@ -1,3 +1,7 @@
+// This is a partial.
+// It lies in <source>/_sass, just waiting to be imported.
+// It does not contain the YAML front matter and has no corresponding output file in the built site.
+
 /**
 * SASS:entrypoint, it is being loaded at assets/css/sass.scss ...
 *
@@ -10,8 +14,6 @@
 * then it will be processed by Jekyll and will be available in the site at assets/css/sass.css
 * Check colors.scss for mappings between colors and values.
 */
-
-@import 'colors';
 
 /**
 * Template Name: Arsha - v4.8.0
