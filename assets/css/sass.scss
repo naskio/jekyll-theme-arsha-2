@@ -11,6 +11,12 @@
 @import 'colors-extras';
 @import "main";
 
+// dynamic content: Liquid template
+
 .cta {
   background: linear-gradient($headerColor, $headerColor), url('{{ "assets/img/cta-bg.jpg" | relative_url }}') fixed center center;;
 }
+
+// dynamic content: Liquid template
+
+@import 'main-extras';
