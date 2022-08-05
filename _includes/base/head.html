@@ -26,20 +26,14 @@
     <link rel="stylesheet" href="{{ "assets/css/normalize.css" | relative_url }}">
     <!-- Normalize CSS -->
 
-    {% comment %}<!-- ARSHA Template Main CSS File -->{% endcomment %}
-    {% comment %}<!-- We aren't using this file anymore, CSS has been reversed into SASS -->{% endcomment %}
-    {% comment %}<link rel="stylesheet" href="{{ "assets/css/styles.css" | relative_url }}">{% endcomment %}
-    {% comment %}<!-- ARSHA Template Main CSS File -->{% endcomment %}
+    <!-- ARSHA Template Main CSS File -->
+    <link rel="stylesheet"
+          href="{% capture url %}{% link assets/css/sass.scss %}{% endcapture %}{{ url | relative_url }}">
+    <!-- ARSHA Template Main CSS File -->
 
     <!-- custom CSS Files -->
     <link rel="stylesheet" href="{{ "assets/css/custom.css" | relative_url }}">
     <!-- custom CSS Files -->
-
-    <!-- custom SASS styles from _sass/main.scss -->
-    {% comment %}<!-- It contains Arsha/style.css -->{% endcomment %}
-    <link rel="stylesheet"
-          href="{% capture url %}{% link assets/css/sass.scss %}{% endcapture %}{{ url | relative_url }}">
-    <!-- custom SASS styles from _sass/main.scss -->
 
     {%- feed_meta -%}
 
