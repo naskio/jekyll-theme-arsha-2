@@ -58,3 +58,7 @@ layout: default
         </div>
     </section><!-- End Portfolio Details Section -->
 </main><!-- End #main -->
+
+{%- if jekyll.environment == 'production' and site.disqus.shortname -%}
+    {%- include addons/disqus.html -%}
+{%- endif -%}

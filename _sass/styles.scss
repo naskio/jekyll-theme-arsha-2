@@ -8,9 +8,9 @@
 * _sass/ folder isn't processed by Jekyll and shouldn't have a Front-Matter => we can't use Liquid here
 * we can use Liquid in the assets/ folder (files with Front-Matter will be processed by Jekyll)
 *
-* This file is an Arsha asset renamed from 'style.css' to 'main.css' to avoid GitHub Pages issue (not loading /assets/css/style.css correctly, it loads a normalize.css instead).
+* This file is an Arsha asset renamed from 'style.css' to 'styles.css' to avoid GitHub Pages issue (not loading /assets/css/style.css correctly, it loads a normalize.css instead).
 * input: style.css (from Arsha template) it has been divided manually into
-* output: _sass/colors.scss, _sass/main.scss, assets/css/sass.scss (we can also use assets/css/main.css for Liquid dynamic content)
+* output: _sass/colors.scss, _sass/styles.scss, assets/css/sass.scss (we can also use assets/css/styles.css for Liquid dynamic content)
 * then it will be processed by Jekyll and will be available in the site at assets/css/sass.css
 * Check colors.scss for mappings between colors and values.
 */

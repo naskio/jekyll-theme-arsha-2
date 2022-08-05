@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
 
-{% include base/head.html content=head-extras %}
+{% include base/head.html layout-extras-head=layout-extras-head page-extras-head=page-extras-head %}
 
 <body>
 {% include header.html %}
@@ -9,7 +9,7 @@
 {% include footer.html %}
 {% include arsha/preloader.html %}
 {% include arsha/go-to-top.html %}
-{% include base/load-js.html content=load-js-extras %}
+{% include base/load-js.html layout-extras-js=layout-extras-js page-extras-js=page-extras-js %}
 </body>
 
 </html>

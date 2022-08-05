@@ -12,5 +12,8 @@
 <script defer src="{{ "assets/js/main.js" | relative_url }}"></script>
 <!-- ARSHA Template Main JS File -->
 
-{{ include.content }}
-{%- include custom/load-js-extras.html -%}
+{%- include site-extras-js.html -%}
+
+{{ include.layout-extras-js }}
+
+{{ include.page-extras-js }}

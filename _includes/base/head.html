@@ -28,11 +28,11 @@
 
     {% comment %}<!-- ARSHA Template Main CSS File -->{% endcomment %}
     {% comment %}<!-- We aren't using this file anymore, CSS has been reversed into SASS -->{% endcomment %}
-    {% comment %}<link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}">{% endcomment %}
+    {% comment %}<link rel="stylesheet" href="{{ "assets/css/styles.css" | relative_url }}">{% endcomment %}
     {% comment %}<!-- ARSHA Template Main CSS File -->{% endcomment %}
 
     <!-- custom CSS Files -->
-    <link rel="stylesheet" href="{{ "assets/css/styles.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "assets/css/custom.css" | relative_url }}">
     <!-- custom CSS Files -->
 
     <!-- custom SASS styles from _sass/main.scss -->
@@ -47,7 +47,10 @@
         {%- include addons/google-analytics.html -%}
     {%- endif -%}
 
-    {{ include.content }}
+    {%- include site-extras-head.html -%}
 
-    {%- include custom/head-extras.html -%}
+    {{ include.layout-extras-head }}
+
+    {{ include.page-extras-head }}
+
 </head>

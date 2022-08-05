@@ -7,16 +7,17 @@
 # We can use Liquid here to addded dynamic content to SASS files.
 ---
 
+// loading partials from _sass/
 @import 'colors';
-@import 'colors-extras';
-@import "main";
+@import 'override-colors';
+@import "styles";
 
-// dynamic content: Liquid template
+/* dynamic content: Liquid template */
 
 .cta {
   background: linear-gradient($headerColor, $headerColor), url('{{ "assets/img/cta-bg.jpg" | relative_url }}') fixed center center;;
 }
+/* dynamic content: Liquid template */
 
-// dynamic content: Liquid template
-
-@import 'main-extras';
+// loading partials from _sass/
+@import 'extras-styles';

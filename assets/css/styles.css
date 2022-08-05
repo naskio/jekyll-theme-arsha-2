@@ -1,21 +1,10 @@
-/**
-* Customize the theme as you wish.
-*/
+---
+# The empty front matter at the top tells Jekyll it needs to process the file (for dynamic url resolution).
+# Dynamic content should be in assets/ folder (in files with a Front-Matter) so it can be processed by Jekyll
+# This file isn't being used now, it can be deleted (content moved to ./sass.scss)
+---
 
-#footer .footer-bottom .social-links a {
-    font-size: 32px;
-    display: inline-block;
-    color: #47b2e4;
-    padding: 8px 0;
-    margin-right: 4px;
-    border-radius: 50%;
-    text-align: center;
-    width: 36px;
-    height: 36px;
-    transition: 0.3s;
-}
-
-#footer .footer-bottom .social-links a:hover {
-    color: #209dd8;
-    text-decoration: none;
+.cta {
+  /*background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("../img/cta-bg.jpg") fixed center center;*/
+  background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url('{{ "assets/img/cta-bg.jpg" | relative_url }}') fixed center center;;
 }
