@@ -21,6 +21,7 @@ url: "https://naskio.github.io"
 name: Arsha
 title: Arsha Bootstrap Template
 email: hi@nask.io
+# logo: assets/img/logo.png # you can specify a logo for your site
 description: >- # this means to ignore newlines until "X:"
   Arsha is a clean and modern business Bootstrap template designed specifically for startup, apps and IT services. 
   You will be able to showcase your content on mobile devices such as smartphones, tablets and all types of devices. 
