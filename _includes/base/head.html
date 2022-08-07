@@ -43,8 +43,12 @@
 
     {%- include site-extras-head.html -%}
 
-    {{ include.layout-extras-head }}
+    {% if layout.extras-head %}
+        {% include {{ layout.extras-head }} %}
+    {% endif %}
 
-    {{ include.page-extras-head }}
+    {% if page.extras-head %}
+        {% include {{ page.extras-head }} %}
+    {% endif %}
 
 </head>

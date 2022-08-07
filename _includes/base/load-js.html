@@ -14,6 +14,11 @@
 
 {%- include site-extras-js.html -%}
 
-{{ include.layout-extras-js }}
 
-{{ include.page-extras-js }}
+{% if layout.extras-js %}
+    {% include {{ layout.extras-js }} %}
+{% endif %}
+
+{% if page.extras-js %}
+    {% include {{ page.extras-js }} %}
+{% endif %}
