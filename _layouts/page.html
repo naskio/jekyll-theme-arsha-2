@@ -4,24 +4,21 @@ layout: default
 
 {% capture url %}{% link index.html %}{% endcapture %}
 {% assign index_url = url | relative_url %}
+{% assign extension = page.path | split: '.' | last %}
 
 <main id="main">
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-        <div class="container">
-            <ol>
-                <li><a href="{{ index_url }}">Home</a></li>
-                <li>{{ page.title }}</li>
-            </ol>
-            <h2>{{ page.title }}</h2>
-        </div>
-    </section><!-- End Breadcrumbs -->
+    {% include arsha/breadcrumbs.html subpage=page.title title=page.title %}
 
-    <section class="inner-page">
-        <div class="container">
-            {{ content }}
-        </div>
-    </section>
+    {% if extension == "html" %}
+        {{ content }}
+    {% else %}
+        <!-- ======= Inner Page Section ======= -->
+        <section class="inner-page">
+            <div class="container">
+                {{ content }}
+            </div>
+        </section><!-- End Inner Page Section -->
+    {% endif %}
 </main><!-- End #main -->
 
 {%- if jekyll.environment == 'production' and site.disqus.shortname -%}
